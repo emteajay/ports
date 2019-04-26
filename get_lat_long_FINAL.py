@@ -1,8 +1,10 @@
-import urllib2, csv
+# updated dependencies
+from urllib.request import urlopen
+import csv
 
 def get_page(url):
     """opens and reads urls"""
-    return urllib2.urlopen(url).read()
+    return urlopen(url).read()
 
 def get_next_target(page):
     """searches container company website for each port's url"""
